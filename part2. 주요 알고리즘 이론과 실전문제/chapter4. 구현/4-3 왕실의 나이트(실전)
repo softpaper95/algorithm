@@ -1,0 +1,18 @@
+import string
+alphabet = string.ascii_lowercase  #알파벳 순서대로 출력
+input_data = input("나이트의 위치를 입력하세요")
+row = int(input_data[1])
+column = input_data[0]
+column_list = ['a','b','c','d','e','f','g','h']
+steps = [[2,1],[2,-1],[-2,1],[-2,-1],[1,-2],[-1,-2],[1,2],[-1,2]]
+count = 0
+
+
+column_num = column_list.index(column) + 1
+for step in steps:
+    new_row = row + step[0]
+    new_column = column_num + int(step[1])
+    if new_row > 0 and new_row < 9 and new_column > 0 and new_column < 9:
+        print("result",new_row, new_column)
+        count += 1
+print(count)
