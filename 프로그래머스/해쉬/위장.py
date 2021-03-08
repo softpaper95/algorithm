@@ -24,3 +24,7 @@ def solution(clothes):
     # 모두 벗는 경우의수는 제거해준다.
     answer = answer * (count + 1) - 1
     return answer
+
+# 다른사람의 풀이
+# reduce 이용
+# reduce 개념 설명: https://www.daleseo.com/python-functools-reduce/
