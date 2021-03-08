@@ -1,26 +1,26 @@
 # 시도1
 # def solution(phone_book):
+#     answer = True
 #     for i in range(1,len(phone_book)):
 #         if phone_book[0] in phone_book[i]:
 #             answer = False
 #             break
-#         else:
-#             answer = True
+#
 #     return answer
 
 # 시도2
-# a = [i for i in phone_book[0]]
-# for k in (1, len(phone_book)):
-#     count = 0
-#     b = [j for j in phone_book[k]]
-#     for x,y in zip(a,b):
-#         if x == y:
-#             count += 1
-#     if count == len(a):
-#         answer = False
-#         break
-#     else:
-#         answer = True
+a = [i for i in phone_book[0]]
+for k in (1, len(phone_book)):
+    count = 0
+    b = [j for j in phone_book[k]]
+    for x,y in zip(a,b):
+        if x == y:
+            count += 1
+    if count == len(a):
+        answer = False
+        break
+    else:
+        answer = True
 
 
 phone_book = ["119", "97674223", "1195524421"]
