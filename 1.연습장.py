@@ -1,6 +1,18 @@
 from collections import Counter
-clothes = [["yellow_hat", "headgear"], ["blue_sunglasses", "eyewear"], ["green_turban", "headgear"]]
-kind_of_clothes = Counter([clothe for _ , clothe in clothes])
+clothes = [["headgear", "yellow_hat"], ["eyewear", "blue_sunglasses"], ["headgear", "green_turban" ]]
+from _collections import defaultdict
+clothes_dict = defaultdict(list)
+for k, v in clothes:
+    clothes_dict[k].append(v)
+print(clothes_dict)
+# # possibility = 1
+# for k in clothes:
+#     clothes_dict[k[1]] += 1
+# # for value in clothes_dict.values():
+# #     possibility *= value + 1
+# # possibility = possibility -1
+# print(clothes_dict)
+
 # cases = 1
 # kind_of_clothes = Counter([clothe for _ , clothe in clothes])
 # for value in kind_of_clothes.values():
