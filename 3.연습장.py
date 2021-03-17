@@ -1,34 +1,36 @@
-priorities = [2,4,5,6,7,6,5,4,3,6,7,8,5,4,3,2,1,2,3,4,5,5]
-location = 3
-answer = 0
+import heapq
 
-p = [(x,y) for x,y in enumerate(priorities)]
+nums = [4,1,7,3,8,5]
+heap = []
+for num in nums:
+    heapq.heappush(heap, (-num,num)) #(우선순위, 값)
 
-while True:
-    v = p.pop(0)
-    if any(v[1] < q[1] for q in p):
-        p.append(v)
-    else:
-        answer += 1
-        if v[0] == location:
-            break
-print(answer)
+while heap:
+    print(heapq.heappop(heap)[1], end =' ')
 
 
-def solution(priorities, location):
-    answer = 0
-    # priorities의 각 요소에 번호를 부여한다.
-    p = [(x,y) for x,y in enumerate(priorities)]
 
-    while True:
+# heap = [4,1,7,3,8,5]
+# sorted_heap = []
+# sorted_heap2 = []
+# # for i in nums:
+# #     heapq.heappush(heap,i)
+# #     print(heap,i)
+#
+#
+# # heapq.heapify(heap)
+# while heap:
+#     sorted_heap.append(heapq.heappop(heap))
+#     print(sorted_heap, end=' ')
+#
+# while sorted_heap:
+#     sorted_heap2.append(heapq.heappop(sorted_heap))
+#     print(sorted_heap2)
 
-        v = p.pop(0)
-        #v[1]보다 하나라도 큰 수가 있으면 v를 p의 맨 뒤로 보낸다.
-        if any(v[1] < q[1] for q in p):
-            p.append(v)
-        else:
-            #v[1]이 p에서 제일 크면 그 수에 번호(answer)를 부여한다.
-            answer += 1
-            #v의 index번호와 location이 일치할때의 순서번호(answer)를 return한다.
-            if v[0] == location:
-                return answer
+
+# print(heap)
+# while list:
+#     i = heapq.heappop(list)
+#     print(i)
+#     heapq.heappush(x,i)
+# print(x)

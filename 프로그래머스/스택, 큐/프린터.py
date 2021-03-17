@@ -1,3 +1,5 @@
+import time
+
 def solution(priorities, location):
     answer = 0
     # priorities의 각 요소에 번호를 부여한다.
@@ -17,3 +19,5 @@ def solution(priorities, location):
                 return answer
 
 
+start_vect=time.time()
+print("training Runtime: %0.2f Minutes"%((time.time() - start_vect)/60))
