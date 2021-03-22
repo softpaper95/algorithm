@@ -1,10 +1,5 @@
-import heapq
-list = [[1,2],[4,2],[3,8],[5,6]]
-heap =[]
+list = [[2, 5, 3], [4, 4, 1], [1, 7, 3]]
 for i in list:
-    heapq.heappush(heap,i)
-
-num = heapq.heappop(heap)[1]
-
-print(heap)
-print(num)
+    n, m = i
+    print(n, m)
+    # print('n:',n,'m:',m, "h:", h)
